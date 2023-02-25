@@ -22,4 +22,17 @@
     - this will make the interpretation of the data difficult
     - it puts importance on creating snapshots / averages of time
 
+## Technical Approaches
+
+- time series analysis
+- KNN (as similar averages of movement should reside in similar regions)
+
+Time series data can be classified into two main categories:
+
+    Stock time series data means measuring attributes at a certain point in time, like a static snapshot of the information as it was.
+    Flow time series data means measuring the activity of the attributes over a certain period, which is generally part of the total whole and makes up a portion of the results.
+
+Box-Jenkins Multivariate Models: Multivariate models are used to analyze more than one time-dependent variable, such as temperature and humidity, over time.   
+https://machinelearningmastery.com/gentle-introduction-box-jenkins-method-time-series-forecasting/  
+
 
