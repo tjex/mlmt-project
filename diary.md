@@ -14,6 +14,7 @@
 - we are interested in the *change* in data (between positional data and time)
 - rate of change / distance range of movement
 - look at the distance relationships of the sensors to one another
+- which axis do x,y,z relate to? Looking at the graphs, I'm not sure z is depth.
 
 ## Open Questions
 
