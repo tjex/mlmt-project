@@ -14,7 +14,6 @@
 - we are interested in the *change* in data (between positional data and time)
 - rate of change / distance range of movement
 - look at the distance relationships of the sensors to one another
-- which axis do x,y,z relate to? Looking at the graphs, I'm not sure z is depth.
 
 ## Open Questions
 
@@ -36,4 +35,23 @@ Time series data can be classified into two main categories:
 Box-Jenkins Multivariate Models: Multivariate models are used to analyze more than one time-dependent variable, such as temperature and humidity, over time.   
 https://machinelearningmastery.com/gentle-introduction-box-jenkins-method-time-series-forecasting/  
 
+## Zoom meeting
+- very large dimensionality
+- probability:
+    (sensor|x, t)
+    (sensor|y, t)
+    ...
+- ask 'for each action, how are the positions distributed for x, y, z (for each sensor)'
+    - eg make a histogram of this.
+- model with qda (quadratic descrim analysis)
+- naive bayes will fit (suggests bob)
+- find the activity with the highest log likleyhood
+- predict per body sensor. What is the liklihood the ankle sensor is sitting.
+    - integrate into an 'ensemble model', which integrates all the above into one. 
+Break into simpler problems:
+    - one sensor, one coordinate, see how well we do
+    - one sensor, three coordinates, see how well
+- what he would like to see:
+    - the above, basically see how far we can go.
+- sounds to me that in essence we drop the timestamp column totally
 
