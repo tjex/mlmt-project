@@ -57,3 +57,13 @@ Break into simpler problems:
     - the above, basically see how far we can go.
 - sounds to me that in essence we drop the timestamp column totally
 
+## March 1
+
+Vira:    
+- for a model based on distribution of coord data (not time series), z coord is the most descriptive value
+- using support vector machine is a good approach
+- tries to divide the data points with a plane
+
+We should look at 3d scatter plotting.
+
+
