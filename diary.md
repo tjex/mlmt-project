@@ -14,11 +14,13 @@
 - we are interested in the *change* in data (between positional data and time)
 - rate of change / distance range of movement
 - look at the distance relationships of the sensors to one another
+- the data / model is very reliant on the size of the person. Sensor data from an adult, will appear very different than sensor data from a chid.
+    - therefore the distances between the sensors, and the change in those distances is an important observations.
 
 ## Open Questions
 
 - how are the postions of the sensors tracked? Are they relative to a central position, or distances of relay points?
-- why are the data samples all in sequential time? Why were the sensors not pinging at the same time / being processed at the same time?
+- why are the data samples all in sequenti time? Why were the sensors not pinging at the same time / being processed at the same time?
     - this will make the interpretation of the data difficult
     - it puts importance on creating snapshots / averages of time
 
