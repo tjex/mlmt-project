@@ -67,3 +67,25 @@ Vira:
 We should look at 3d scatter plotting.
 
 
+## March 3
+
+- do we want to drop the milisecond division?
+
+Thinking about creating the data init template:
+- what groupings will be needed? Make more than is needed.
+- is there a consistent naming scheme?
+
+desired data structure = `[unique_seq_name] + [unique_tag_id] + [time_stamp] + [x, y, z] + [unique_activity]`
+
+we want one dataframe structure that is comprised of the groupings:
+- sequence name
+- tag id
+- activity
+
+### Zoom Meeting
+
+chunk the data together as one second
+decided on 6 or so experiments
+decided to drop time series more or less. will make things too complex.
+
+
