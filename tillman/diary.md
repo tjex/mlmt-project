@@ -82,10 +82,59 @@ we want one dataframe structure that is comprised of the groupings:
 - tag id
 - activity
 
-### Zoom Meeting
+## Zoom Meeting
 
 chunk the data together as one second
 decided on 6 or so experiments
 decided to drop time series more or less. will make things too complex.
 
+## Zoom Meeting March 6th
 
+- not looking for a specific number of models, just that we implement and explore them well
+- which x, y, z pos for which sensor is best suited for prediction? <- feature selection / engineering
+- synchronizing by interpolation and sampling
+- NB, support vector, anomaly detection
+
+## Model Review
+
+### KNN
+
+Classifies based on the input data's features. Data with certain features will be clustered together. Data in 
+these clusters will have labels (you have to have labels to do KNN). The model will then assign a label to 
+the new input data based on the labels on the *nearest neighbours*. Higher K value will take into account more 
+neigbours to derive the 'correct' label. 
+
+The nearest neighbours are found by calculating the euclidean distances between the neighbours. 
+
+k=3 means 'find the 3 closest neighbours (based on their euclidean distances)
+
+### SVM (Support Vector Machine)
+
+Classifies by dividing the data points by fitting a plane in the largest divisional space between the data points. 
+The 'largest space' is found by calculating a margin, which is the distance from the divisional plane to 
+the next closest data points, thereafter called 'support vectors'. 
+
+SVM's are really sensetive to outliers. Outliers can ruin the the placement of the divisional plane and also the 
+creation of margins. This is because the SVM does not consider weightings when encountering data points. 
+
+eg one signular data point from class A, which falls incredibly close to class B, will still cause the plane to be placed on the 
+in between all instances of A and B, despite the vast majority of data being far away.
+
+To compensate for this, we need to allow for missclassification. Allowing for missclassification enables outliers to 
+have less of an effect on the placement of an appropriate divisional line. This is an example of the bias / variance 
+tradeoff that's inherit it all ML implementations.
+
+When we allow for misscalssifications, it's called a soft-margin. Only at this point is it called a Support Vector Machine. 
+This name comes from the fact that observations on or within the margin are called 'support vectors'. 
+When not allowing for missclasification we are using a Maximal Margin Classifier.
+
+
+### Outlier Detection
+
+Identifying data points that are anomalous to the rest of the data set. This can act as a type of data 
+filter or pre-training step. Often used in business environments to detect occurences that do not follow 
+expected patterns and can therefore signal that something is wrong and should be looked at.
+
+This could help us to clean the data and create more accurate data sets. 
+It can also be used in time series data, as it can take time into account and use it as a identifier to 
+base its comparisons on.

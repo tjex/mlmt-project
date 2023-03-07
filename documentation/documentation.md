@@ -24,17 +24,39 @@ fontfamilyoptions: sfdefault
 
 We graphed the distributions of each sensor (ie, how often does the sensor record a distance between 0 - room max)
 
-![ml-davide-sensordata0](documentation/images/experiments/ml-davide-sensordata-0.png)
+![ml-davide-sensordata0](/images/experiments/ml-davide-sensordata-0.png)
 
 It appeared that there were some correlations between labels and individual coordinates, especially for the x-coordinates.
 After generating this graph we observed there to be fairly long periods of time where one sensor does not provide any data
 
-![one-param-one-tag](documentation/images/experiments/one-param-one-tag.png)
+![one-param-one-tag](/images/experiments/one-param-one-tag.png)
 
-After the second project meeting we decided on the following direction:
 
+## Viras Research 
+
+Vira collected a lot of research on many different models and noted down which ones could be good pics given 
+our dataset.
 
 ## Cleaning The Data 
 
 Manually editing the data file to provide column headings and removing the subsecond unit. 
 Makes data handling easier and decreases lines of code and therefore chance of buggy code.
+
+## Data Init
+
+We wanted to have the same basis for data handling and processing across all our implementations.   
+To do this we created a data initialization chunk of code that read the data file and created some preliminary data frames and arrays. 
+These data types formed the basis then of further data handling.
+
+This allowed us to be confident that each team member's implementations were using data structures (arrays, data frames, etc) that were 
+in the same format and included the same data in the same order. This is important as it meant that we could confidently assert that the models were 
+being trained on the same data, which meant that we could more confidently compare the performance, accuracies and other outputs of the models, despite having 
+worked in different jupyter notebooks.
+
+## Second Zoom Meeting
+
+After the second project meeting we decided on the following direction: 
+
+- to use SVM, Naive Bayes and KNN
+- to focus on quality not quantity
+- to look at implementing time series analysis, after Bob's pointers
