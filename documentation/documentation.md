@@ -42,6 +42,13 @@ our dataset.
 Manually editing the data file to provide column headings and removing the subsecond unit. 
 Makes data handling easier and decreases lines of code and therefore chance of buggy code.
 
+## Feature Generation
+
+Davide's interpolation of the original data set created a new data set that allowed for all x,y,z coords 
+of each sensor to be grouped into the same row of the new data set. This created a richer feature set 
+and one that more appropriately aligned with the question of interest: which features of what sensors best 
+describe an activity?
+
 ## Data Init
 
 We wanted to have the same basis for data handling and processing across all our implementations.   
