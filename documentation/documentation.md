@@ -60,3 +60,8 @@ After the second project meeting we decided on the following direction:
 - to use SVM, Naive Bayes and KNN
 - to focus on quality not quantity
 - to look at implementing time series analysis, after Bob's pointers
+
+## Process Progress
+
+Davide worked on merging and interpolating our data set, which contained 4 sensors with 3 coordinates each. 
+After the merging we have a data set that considers this data now as a 12 dimensional data set.

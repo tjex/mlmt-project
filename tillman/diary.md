@@ -124,10 +124,21 @@ To compensate for this, we need to allow for missclassification. Allowing for mi
 have less of an effect on the placement of an appropriate divisional line. This is an example of the bias / variance 
 tradeoff that's inherit it all ML implementations.
 
-When we allow for misscalssifications, it's called a soft-margin. Only at this point is it called a Support Vector Machine. 
+When we allow for misscalssifications, it's called a soft-margin. Only at this point is it called a Support Vector Classifier. 
 This name comes from the fact that observations on or within the margin are called 'support vectors'. 
 When not allowing for missclasification we are using a Maximal Margin Classifier.
 
+Is scaling necessary for SVM?  
+Yes   
+if you do not scale all features to comparable ranges, the features with the largest range will completely 
+dominate in the computation of the kernel matrix.
+
+
+Kernal functions are used to find SV classifiers in higher dimensions.
+The radial kernal is designed to work in infinite number of dimensions. It works based on a weighted 
+nearest neighbour. So it's neighbours have an effect on how the classifier is decided. 
+
+We can use the 'kernal trick' to simulate the process of transforming the data into higher dimensions. 
 
 ### Outlier Detection
 
@@ -138,3 +149,4 @@ expected patterns and can therefore signal that something is wrong and should be
 This could help us to clean the data and create more accurate data sets. 
 It can also be used in time series data, as it can take time into account and use it as a identifier to 
 base its comparisons on.
+
