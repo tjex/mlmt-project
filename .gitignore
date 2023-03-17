@@ -174,3 +174,4 @@ poetry.toml
 
 tillman/*.csv
 tillman/PCA
+*.zip
